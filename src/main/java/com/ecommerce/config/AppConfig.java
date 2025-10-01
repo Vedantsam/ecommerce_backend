@@ -29,8 +29,8 @@ public class AppConfig {
                 .cors(cors -> cors.configurationSource(request -> {
                     CorsConfiguration cfg = new CorsConfiguration();
                     cfg.setAllowedOriginPatterns(List.of(
-                            "http://localhost:*"
-//                            "https://*.vercel.app" // allow any Vercel frontend subdomain
+                            "http://localhost:*",
+                            "https://*.vercel.app" // allow any Vercel frontend subdomain
                     ));
                     cfg.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH"));
                     cfg.setAllowCredentials(true);
